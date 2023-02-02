@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css" media="all">
+	<link rel="stylesheet" href="css/reset.css" media="all">
+	<link rel="stylesheet" href="css/style.css" media="all">
   <title>Page business card</title>
 </head>
 <body>
   <main class="main">
     <div class="photo">
-      <img class="photo__img" src="img/photo.jpg" alt="img">
+      <img class="photo__img" src="img/photo.jpg" alt="img" class="photo__img">
       <div class="signature">
         <p class="p signature__p">
           РАЗРАБОТЧИК
@@ -29,23 +30,24 @@
         <img class="social__img" src="img/github.svg" alt="logo">
       </div>
       <div class="texnologis">
-        <h2 class="texnologis">Стек технологии:</h2>
-        <div class="texnologis__block">
-          <div class="texnologis__circle">HTML</div>
-          <div class="texnologis__circle">CSS</div>
-          <div class="texnologis__circle">Saas</div>
-          <div class="texnologis__circle">БЭМ</div>
-          <div class="texnologis__circle">Flexbox</div>
-        </div>
+        <h2 class="texnologis__header">Стек технологии:</h2>
+				<ul class="texnologis__block">
+					<li class="texnologis__circle">HTML</li>
+					<li class="texnologis__circle">CSS</li>
+					<li class="texnologis__circle">Saas</li>
+					<li class="texnologis__circle">БЭМ</li>
+					<li class="texnologis__circle">Flexbox</li>
+				</ul>
       </div>
       <div class="about">
         <h2 class="about__head">О cебе:</h2>
-        <p class="description">Лучший программист всех времен. Взломаю Пентагон, сверстаю сайт, поправлю кнопочку на 1 рх влево. Готов работать 24/7. В свободное время учу английский, китайский. Играю в игры. Люблю бутерброды с колбасой и сыром.</p>
+				<p class="about__description">Лучший программист всех времен. Взломаю Пентагон, сверстаю сайт, поправлю кнопочку на 1 рх влево. Готов работать 24/7.</p>
+				<p class="about__description">В свободное время учу английский, китайский. Играю в игры. Люблю бутерброды с колбасой и сыром.</p>
       </div>
-      <form action="/">
-        <input type="email">
-        <input type="text">
-        <input type="submit" value="Связаться со мной">
+      <form action="/" class="form">
+        <input type="email" placeholder="email" class="input form__email">
+				<input type="text" placeholder="сообщение" class="input form__message">
+        <input type="submit" value="Связаться со мной" class="form__button">
       </form>
     </div>
   </main>
