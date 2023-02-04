@@ -2,6 +2,7 @@
 	grid-template-columns: 1fr;
 
 	justify-items: center;
+	background: url(../img/background.png) center bottom no-repeat;
 }
 .photo {
 	width: fit-content;
@@ -11,4 +12,5 @@
 }
 .content {
 	width: 390px;
+	background: none;
 }
