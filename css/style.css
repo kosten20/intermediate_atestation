@@ -1,26 +1,26 @@
 @font-face {
-font-family: "custom-roboto";
-  src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"); 
+	font-family: "custom-roboto";
+	src: url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 
-  font-weight: 400;
-  font-style: normal;
+	font-weight: 400;
+	font-style: normal;
 }
 @font-face {
-font-family: "custom-roboto";
-  src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+	font-family: "custom-roboto";
+	src: url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype");
 
-  font-weight: 500;
-  font-style: normal;
+	font-weight: 500;
+	font-style: normal;
 }
 body {
-  font-family: "custom-roboto", sans-serif;
+	font-family: "custom-roboto", sans-serif;
 
-  font-style: normal;
-  font-weight: 500;
+	font-style: normal;
+	font-weight: 500;
 }
 .main {
-  display: grid;
-	grid-template-columns: min-content auto;
+	display: grid;
+	grid-template-columns: min-content 1fr;
 }
 .photo {
 	position: relative;
@@ -30,10 +30,12 @@ body {
 }
 .photo__img {
 	width: 33vw;
+	height: 100%;
 }
 .signature {
 	width: 100%;
-	height: 103px;
+
+	padding: 12px 0;
 
 	background: #121212;
 
@@ -48,33 +50,37 @@ body {
 .signature__p {
 	font-weight: 400;
 	/*font-size: 64px;*/
-	font-size: calc(24px + 40 * (100vw / 1920));
-	line-height: 75px;
+	font-size: calc(24px + 40 * (100vw - 540px) / 1380);
 
-	color: #FFFFFF;
+	color: #ffffff;
 }
 .content {
 	background: url(../img/background.png) center bottom no-repeat;
 	/*background-size: cover;
 	background-position: center bottom;*/
 	display: grid;
-	grid-template: repeat(4, min-content) / 1fr;
-	row-gap: 50px;
+	grid-auto-rows: min-content;
+	grid-template-columns: 1fr;
+	row-gap: 2.5vw;
 
-	padding: 3.6vw 3.1vw;
+	padding: 0 2vw;
+	align-content: center;
 }
 .FIO {
-	
+	display: grid;
+	gap: 10px;
 }
 .FIO__name {
-	font-size: 48px;
-	line-height: 56px;
+	/*font-size: 48px;*/
+
+	font-size: calc(24px + 23 * (100vw - 540px) / 1380);
 
 	color: #121212;
 }
 .FIO__citi {
-	font-size: 24px;
-	line-height: 28px;
+	/*font-size: 24px;*/
+
+	font-size: calc(18px + 5 * (100vw - 540px) / 1380);
 
 	color: #121212;
 }
@@ -86,23 +92,24 @@ body {
 .social__img:hover {
 	opacity: 0.7;
 }
-.texnologis{
+.texnologis {
 	display: grid;
+
 	gap: 20px;
 }
 .texnologis__header {
-
-	font-size: calc(20px + 12 * (100vw / 1920));
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 	/*font-size: 32px;*/
-	line-height: 38px;
 
 	color: #121212;
 }
 .texnologis__block {
 	display: grid;
-	grid-template: 66px / repeat(auto-fit, minmax(100px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(106px, 1fr));
+	grid-auto-rows: clamp(35px, max(3.3vw, 4.8vw), 66px);
 
-	gap: 25px;
+	column-gap: 20px;
+	row-gap: 10px;
 }
 .texnologis__circle {
 	background: #414141;
@@ -114,22 +121,19 @@ body {
 
 	/*font-size: 32px;*/
 
-	font-size: calc(16px + 16 * (100vw / 1920));
-	line-height: 38px;
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 
-	color: #FFFFFF;
+	color: #ffffff;
 }
 .texnologis__circle:hover {
 	opacity: 0.7;
 }
-.about{
-
+.about {
 }
 .about__head {
 	/*font-size: 32px;*/
-	
-	font-size: calc(20px + 12 * (100vw / 1920));
-	line-height: 38px;
+
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 
 	color: #121212;
 
@@ -138,8 +142,7 @@ body {
 }
 .about__description {
 	/*font-size: 32px;*/
-	line-height: 38px;
-	font-size: calc(16px + 16 * (100vw / 1920));
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 
 	color: #121212;
 
@@ -150,48 +153,48 @@ body {
 
 .form {
 	display: grid;
-	grid-template:
-	"email message" 66px
-	"button button" 66px
-	/ 340px 340px;
-	gap: 25px;
+	grid-template: repeat(2, clamp(35px, max(3.3vw, 4.8vw), 66px)) / repeat(
+			2,
+			minmax(185px, 340px)
+		);
+	/*grid-template:
+	"email message"
+	"button button";*/
+	column-gap: 20px;
+	row-gap: 16px;
 }
 .input {
-	background: #FFFFFF;
+	background: #ffffff;
 
 	/*font-size: 32px;*/
 
-	font-size: calc(16px + 16 * (100vw / 1920));
-	line-height: 38px;
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 
 	border: 1px solid #121212;
 	border-radius: 11px;
 }
 .input::placeholder {
 	/*font-size: 32px;*/
-	
-	font-size: calc(16px + 16 * (100vw / 1920));
+
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 
 	color: #121212;
 
 	opacity: 1;
 }
 .form__email {
-	grid-area: email;
 }
 .form__message {
-	grid-area: message;
 }
 .form__button {
-	grid-area: button;
-
 	background: #121212;
 	border-radius: 11px;
 
+	grid-column: span 2;
+
 	/*font-size: 32px;*/
 
-	font-size: calc(16px + 16 * (100vw / 1920));
-	line-height: 38px;
+	font-size: calc(16px + 15 * (100vw - 540px) / 1380);
 
 	color: #ffffff;
 }

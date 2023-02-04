@@ -1,0 +1,14 @@
+.main {
+	grid-template-columns: 1fr;
+
+	justify-items: center;
+}
+.photo {
+	width: fit-content;
+}
+.photo__img {
+	width: 72vw;
+}
+.content {
+	padding: 0 14vw;
+}
