@@ -1,57 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/reset.css" media="all">
-	<link rel="stylesheet" href="css/style.css" media="all">
-	<link rel="stylesheet" href="css/style-mobile.css" media="(max-width: 540px)">
-  <title>Page business card</title>
-</head>
-<body>
-  <main class="main">
-    <div class="photo">
-      <img class="photo__img" src="img/photo.jpg" alt="img" class="photo__img">
-      <div class="signature">
-        <p class="p signature__p">
-          РАЗРАБОТЧИК
-        </p>
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" media="all" />
+    <link rel="stylesheet" href="css/style.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="css/style-mobile.css"
+      media="(max-width: 540px)"
+    />
+    <title>Page business card</title>
+  </head>
+  <body>
+    <div class="poaBody">
+      <select name="" id="langButton">
+        <option value="ru" onclick="langButton()">русский</option>
+        <option value="en" onclick="langButton()">английкий</option>
+      </select>
     </div>
-    <div class="content">
-      <div class="FIO">
-        <p class="FIO__name">Иванов Иван Иванович</p>
-        <p class="FIO__citi">г. Москва</p>
+    <main class="main">
+      <div class="photo">
+        <img
+          class="photo__img"
+          src="img/photo.jpg"
+          alt="img"
+          class="photo__img"
+        />
+        <div class="signature">
+          <p class="p signature__p lang-signature">РАЗРАБОТЧИК</p>
+        </div>
       </div>
-      <div class="social">
-        <img class="social__img" src="img/insta.svg" alt="logo">
-        <img class="social__img" src="img/whatsapp.svg" alt="logo">
-        <img class="social__img" src="img/vk.svg" alt="logo">
-        <img class="social__img" src="img/telegram.svg" alt="logo">
-        <img class="social__img" src="img/linkedin.svg" alt="logo">
-        <img class="social__img" src="img/github.svg" alt="logo">
+      <div class="content">
+        <div class="FIO">
+          <p class="FIO__name">Иванов Иван Иванович</p>
+          <p class="FIO__citi lang-citi">г. Москва</p>
+        </div>
+        <div class="social">
+          <img class="social__img" src="img/insta.svg" alt="logo" />
+          <img class="social__img" src="img/whatsapp.svg" alt="logo" />
+          <img class="social__img" src="img/vk.svg" alt="logo" />
+          <img class="social__img" src="img/telegram.svg" alt="logo" />
+          <img class="social__img" src="img/linkedin.svg" alt="logo" />
+          <img class="social__img" src="img/github.svg" alt="logo" />
+        </div>
+        <div class="texnologis">
+          <h2 class="texnologis__header lang-texnologis">Стек технологии:</h2>
+          <ul class="texnologis__block">
+            <li class="texnologis__circle">HTML</li>
+            <li class="texnologis__circle">CSS</li>
+            <li class="texnologis__circle">Saas</li>
+            <li class="texnologis__circle">БЭМ</li>
+            <li class="texnologis__circle">Flexbox</li>
+          </ul>
+        </div>
+        <div class="about">
+          <h2 class="about__head">О cебе:</h2>
+          <p class="about__description lang-description1">
+            Лучший программист всех времен. Взломаю Пентагон, сверстаю сайт,
+            поправлю кнопочку на 1 рх влево. Готов работать 24/7.
+          </p>
+          <p class="about__description2 lang-description2">
+            В свободное время учу английский, китайский. Играю в игры. Люблю
+            бутерброды с колбасой и сыром.
+          </p>
+        </div>
+        <form action="/" class="form">
+          <input type="email" placeholder="email" class="input form__email" />
+          <input
+            type="text"
+            placeholder="сообщение"
+            class="input form__message"
+          />
+          <button type="submit" class="form__button">Связаться со мной</button>
+        </form>
       </div>
-      <div class="texnologis">
-        <h2 class="texnologis__header">Стек технологии:</h2>
-				<ul class="texnologis__block">
-					<li class="texnologis__circle">HTML</li>
-					<li class="texnologis__circle">CSS</li>
-					<li class="texnologis__circle">Saas</li>
-					<li class="texnologis__circle">БЭМ</li>
-					<li class="texnologis__circle">Flexbox</li>
-				</ul>
-      </div>
-      <div class="about">
-        <h2 class="about__head">О cебе:</h2>
-				<p class="about__description">Лучший программист всех времен. Взломаю Пентагон, сверстаю сайт, поправлю кнопочку на 1 рх влево. Готов работать 24/7.</p>
-				<p class="about__description">В свободное время учу английский, китайский. Играю в игры. Люблю бутерброды с колбасой и сыром.</p>
-      </div>
-      <form action="/" class="form">
-        <input type="email" placeholder="email" class="input form__email">
-				<input type="text" placeholder="сообщение" class="input form__message">
-        <input type="submit" value="Связаться со мной" class="form__button">
-      </form>
-    </div>
-  </main>
-</body>
+    </main>
+    <script src="lang.js"></script>
+  </body>
 </html>
